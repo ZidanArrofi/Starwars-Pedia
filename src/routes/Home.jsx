@@ -1,49 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Main from "../layouts/Main";
+import { Image } from "@chakra-ui/react";
 
-// ROUTES
-import people from "../assets/people.jpeg";
-import planets from "../assets/planets.jpeg";
-import movies from "../assets/movies.jpeg";
-
-// CHAKRA UI
-import { Button } from "@chakra-ui/react";
-import { Container } from "@chakra-ui/react";
-import { Card, Image, SimpleGrid, Text, CardBody } from "@chakra-ui/react";
 
 const Home = () => {
   return (
     //  Align the Container to middle vertically
-    <Container>
-      <SimpleGrid columns={3} spacing={2} marginTop={200}>
-        <Link
-          to={"star-wars/people"}
-          style={{
-            margin: "0 auto",
-          }}
-        >
-          <Button>People</Button>
-        </Link>
-
-        <Link
-          to={"star-wars/planets"}
-          style={{
-            margin: "0 auto",
-          }}
-        >
-          <Button>Planets</Button>
-        </Link>
-
-        <Link
-          to={"star-wars/movies"}
-          style={{
-            margin: "0 auto",
-          }}
-        >
-          <Button>Movies</Button>
-        </Link>
-      </SimpleGrid>
-    </Container>
+    <>
+    
+    <Main/>
+    <Image src='https://i.pinimg.com/564x/e7/59/83/e75983d0104c63d9fbff045152508b08.jpg' alt='Star Wars' objectFit="fill" width="8xl"  />
+   
+    </>
+    
   );
 };
 
